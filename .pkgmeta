@@ -1,0 +1,17 @@
+package-as: WeakAurasPatched
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+move-folders:
+  WeakAurasPatched/WeakAuras: WeakAuras
+  WeakAurasPatched/WeakAurasOptions: WeakAurasOptions
+  WeakAurasPatched/WeakAurasModelPaths: WeakAurasModelPaths
+  WeakAurasPatched/WeakAurasTemplates: WeakAurasTemplates
+  WeakAurasPatched/WeakAurasArchive: WeakAurasArchive
+
+ignore:
+  - README.md
+  - CHANGELOG.md
+  - patcher.sh

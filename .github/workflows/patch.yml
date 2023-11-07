@@ -1,0 +1,38 @@
+name: patch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull the latest version
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch
+        run: bash patcher.sh
+        env:
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+      - name: Auto Packaging
+        if: env.RELEASE != ''
+        uses: BigWigsMods/packager@master
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      - name: Upload to Github Actions
+        if: env.RELEASE != ''
+        uses: actions/upload-artifact@v2
+        with:
+          name: WeakAurasPatched
+          path: .release/*.zip
+      - name: Send a message to Discord if meets a failure
+        if: env.RELEASE != '' && failure()
+        uses: nebularg/actions-discord-webhook@v1
+        with:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          status: ${{ job.status }}
