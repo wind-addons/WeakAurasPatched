@@ -69,7 +69,7 @@ echo "WeakAuras.Private = Private" >>WeakAuras/WeakAuras.lua
 
 # changelog
 echo "# Patch" >CHANGELOG.md
-echo "- Original: $ZIP_URL" >>CHANGELOG.md
+echo "- Original: [WeakAuras $LATEST_TAG]($ZIP_URL)" >>CHANGELOG.md
 
 # let the packager know the version
 git add WeakAuras*
