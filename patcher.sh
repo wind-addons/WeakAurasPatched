@@ -49,9 +49,9 @@ rm addon.zip
 for dir in WeakAuras WeakAurasArchive WeakAurasModelPaths WeakAurasOptions WeakAurasTemplates; do
     # modify the toc file
     for file in "$dir"/*.toc; do
-        "$SED_COMMAND" -i 's/^## X-Curse-Project-ID: .*\([^0-9]*\)$/## X-Curse-Project-ID: 934685\1/' "$file"
+        "$SED_COMMAND" -i 's/^## X-Curse-Project-ID: .*\([^0-9]*\)$/## X-Curse-Project-ID: 0\1/' "$file"
         "$SED_COMMAND" -i 's/^## X-WoWI-ID: .*$/## X-WoWI-ID: 0/' "$file"
-        "$SED_COMMAND" -i 's/^## X-Wago-ID: .*\([^0-9A-Za-z]*\)$/## X-Wago-ID: rN4VJMKD\1/' "$file"
+        "$SED_COMMAND" -i 's/^## X-Wago-ID: .*\([^0-9A-Za-z]*\)$/## X-Wago-ID: 0\1/' "$file"
         "$SED_COMMAND" -i 's/^## Title: \(.*\)$/## Title: |cffe8344fPatched|r \1/' "$file"
         "$SED_COMMAND" -i 's/^## Author: \(.*\)$/## Author: Patched by |cff48a295ang2hou|r, Original WeakAuras made by \1/' "$file"
     done
