@@ -57,8 +57,10 @@ for dir in WeakAuras WeakAurasArchive WeakAurasModelPaths WeakAurasOptions WeakA
     done
 
     # take back the debug code
-    find "$dir" -type f -exec "$SED_COMMAND" -i 's/--\[==\[@debug@/--@debug@/g' {} \;
-    find "$dir" -type f -exec "$SED_COMMAND" -i 's/--@end-debug@\]==\]/--@end-debug@/g' {} \;
+    find "$dir" -type f -exec "$SED_COMMAND" -i 's/@alpha@/@nothing@/g' {} \;
+    find "$dir" -type f -exec "$SED_COMMAND" -i 's/@end-alpha@/@nothing@/g' {} \;
+    find "$dir" -type f -exec "$SED_COMMAND" -i 's/@debug@/@nothing@/g' {} \;
+    find "$dir" -type f -exec "$SED_COMMAND" -i 's/@end-debug@/@nothing@/g' {} \;
 
     # guide user to the patched version of WeakAuras support
     find "$dir" -type f -exec "$SED_COMMAND" -i 's/https:\/\/discord\.gg\/weakauras/https:\/\/discord\.gg\/xhUHVCgAGy/g' {} \;
