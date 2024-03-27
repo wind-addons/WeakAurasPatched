@@ -1,5 +1,7 @@
 # WeakAuras Patched
 
+![sample](https://github.com/fang2hou/WeakAurasPatched/assets/6694722/f3796237-310b-45a5-af9e-c6fc7ffc9460)
+
 An unofficial patched version of WeakAuras 2.
 
 [Download](https://github.com/fang2hou/WeakAurasPatched/wiki/Download) | [下载](https://github.com/fang2hou/WeakAurasPatched/wiki/%E4%B8%8B%E8%BD%BD)
