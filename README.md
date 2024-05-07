@@ -15,6 +15,6 @@ Because the WeakAuras Team set a limitation on WeakAuras API access from version
 
 ## What is patched?
 
-- Allow all WeakAuras APIs to be accessed by external code.
+- Allow all WeakAuras APIs to be accessible by external code.
 
 Currently, only the WeakAuras APIs are patched. The ElvUI-style skin is not included in this addon. To use the skin, download it separately from [ElvUI_WindTools](https://github.com/fang2hou/ElvUI_WindTools) and install it as an additional addon.
