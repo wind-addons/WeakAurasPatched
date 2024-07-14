@@ -66,8 +66,10 @@ for dir in WeakAuras WeakAurasArchive WeakAurasModelPaths WeakAurasOptions WeakA
     find "$dir" -type f -exec "$SED_COMMAND" -i 's/https:\/\/discord\.gg\/weakauras/https:\/\/discord\.gg\/xhUHVCgAGy/g' {} \;
     find "$dir" -type f -exec "$SED_COMMAND" -i 's/https:\/\/weakauras\.wtf/https:\/\/discord\.gg\/xhUHVCgAGy/g' {} \;
 done
-# - 2. allow third-party addons to hook into the WeakAuras API
+
+# - 2. allow third-party addons to hook into the WeakAuras/WeakAurasOptions API
 echo "WeakAuras.Private = Private" >>WeakAuras/WeakAuras.lua
+echo "WeakAuras.OptionsPrivate = OptionsPrivate" >>WeakAurasOptions/WeakAurasOptions.lua
 
 # changelog
 echo "# Patch" >CHANGELOG.md
