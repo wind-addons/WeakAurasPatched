@@ -53,7 +53,7 @@ for dir in WeakAuras WeakAurasArchive WeakAurasModelPaths WeakAurasOptions WeakA
         "$SED_COMMAND" -i 's/^## X-WoWI-ID: .*$/## X-WoWI-ID: 0/' "$file"
         "$SED_COMMAND" -i 's/^## X-Wago-ID: .*\([^0-9A-Za-z]*\)$/## X-Wago-ID: 0\1/' "$file"
         "$SED_COMMAND" -i 's/^## Title: \(.*\)$/## Title: |cffe8344fPatched|r \1/' "$file"
-        "$SED_COMMAND" -i 's/^## Author: \(.*\)$/## Author: Patched by |cff48a295ang2hou|r, Original WeakAuras made by \1/' "$file"
+        "$SED_COMMAND" -i 's/^## Author: \(.*\)$/## Author: Patched by |cff48a295fang2hou|r, Original WeakAuras made by \1/' "$file"
     done
 
     # take back the debug code
